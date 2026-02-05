@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C. | Claes-Philip Staiger | Technology • Consulting • Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: {
+                            50: '#f6f6f6',
+                            100: '#e7e7e7',
+                            200: '#d1d1d1',
+                            300: '#b0b0b0',
+                            400: '#888888',
+                            500: '#6d6d6d',
+                            600: '#5d5d5d',
+                            700: '#4f4f4f',
+                            800: '#3d3d3d',
+                            900: '#2d2d2d',
+                            950: '#1a1a1a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .line-decoration::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #3d3d3d;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-charcoal-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-charcoal-900/95 backdrop-blur-sm border-b border-charcoal-700/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo placeholder -->
+                <a href="#" class="flex items-center">
+                    <!-- Logo will go here -->
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#services" class="text-charcoal-300 hover:text-white text-sm transition-colors">Services</a>
+                    <a href="#architecture" class="text-charcoal-300 hover:text-white text-sm transition-colors">Architecture</a>
+                    <a href="#cases" class="text-charcoal-300 hover:text-white text-sm transition-colors">Cases</a>
+                    <a href="#testimonials" class="text-charcoal-300 hover:text-white text-sm transition-colors">References</a>
+                    <a href="#about" class="text-charcoal-300 hover:text-white text-sm transition-colors">About</a>
+                    <a href="#contact" class="ml-4 px-5 py-2.5 bg-white text-charcoal-900 text-sm font-medium hover:bg-charcoal-100 transition-colors">
+                        Contact
+                    </a>
+                    <a href="index.html" class="text-charcoal-300 hover:text-white text-sm transition-colors font-medium">SV</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal-900 border-t border-charcoal-700">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#services" class="block text-charcoal-300 hover:text-white py-2">Services</a>
+                <a href="#architecture" class="block text-charcoal-300 hover:text-white py-2">Architecture</a>
+                <a href="#cases" class="block text-charcoal-300 hover:text-white py-2">Cases</a>
+                <a href="#testimonials" class="block text-charcoal-300 hover:text-white py-2">References</a>
+                <a href="#about" class="block text-charcoal-300 hover:text-white py-2">About</a>
+                <a href="#contact" class="block text-white font-medium py-2">Contact →</a>
+                <a href="index.html" class="block text-charcoal-300 hover:text-white py-2">SV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-charcoal-900 flex items-center relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-72 h-72 border border-white rounded-full"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 border border-white rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-10">
+            <div class="max-w-3xl fade-in">
+                <!-- Company Name -->
+                <div class="mb-12">
+                    <div class="text-lg tracking-[0.2em] uppercase text-white font-medium">Claes Philip Staiger</div>
+                    <div class="text-sm tracking-[0.3em] uppercase text-charcoal-400 mt-2">Technology | Consulting | Innovation</div>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-light text-white mb-8 leading-tight">
+                    Architecture that creates<br>
+                    <span class="gradient-text">real value</span>
+                </h1>
+
+                <p class="text-xl text-charcoal-300 mb-12 max-w-2xl leading-relaxed">
+                    We help organizations navigate technical complexity and build architectures that endure. 20+ years of experience from enterprise transformations to startup scaling.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-charcoal-900 font-medium hover:bg-charcoal-100 transition-colors">
+                        Book a consultation
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-charcoal-600 text-white hover:bg-charcoal-800 transition-colors">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-charcoal-500 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mb-16">
+                <span class="text-charcoal-500 text-sm tracking-wider uppercase">Services</span>
+                <h2 class="text-4xl font-display mt-4 mb-6 line-decoration">What We Offer</h2>
+                <p class="text-lg text-charcoal-600">
+                    Services that take you from your current state to your desired vision – with strategic depth and hands-on practical capability.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Architecture & Strategy</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        From enterprise overviews to detailed integration patterns. We design solutions that balance business needs with technical sustainability.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Transformation & Modernization</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        We guide organizations through complex transformation journeys – from legacy to cloud-native, from silos to integrated ecosystems.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Architecture Function & Governance</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        We help you build internal architecture expertise and establish structures that ensure long-term technical excellence.
+                    </p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Consulting & Hands-on Support</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        Flexible engagement – from strategic consulting to embedded architecture support. Senior expertise throughout the entire engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="py-24 lg:py-32 bg-charcoal-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-charcoal-500 text-sm tracking-wider uppercase">Architecture</span>
+                    <h2 class="text-4xl font-display mt-4 mb-6">Architecture Services</h2>
+                    <p class="text-lg text-charcoal-600 mb-8">
+                        Architecture services for every level of your organization – from strategic enterprise architecture to hands-on solution design.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-900"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Enterprise Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">Strategic architecture with TOGAF, Archimate, roadmaps and governance.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-400"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Solution Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">Design of solutions that are technically robust and business-relevant.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-400"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Integration Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">API design, event-driven architecture. Azure, MuleSoft, Kafka.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-400"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Information Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">Data models, master data, taxonomies, metadata strategies and information flows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-charcoal-900 p-10 text-white">
+                    <h3 class="text-2xl font-display mb-6">Technology & Platforms</h3>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Integration & Middleware</span>
+                            <p class="mt-1">MuleSoft, Kafka, Flowfuse, FRENDS, ESB</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Cloud & Infrastructure</span>
+                            <p class="mt-1">Azure, AWS, Kubernetes, Docker, IaC</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Software Development</span>
+                            <p class="mt-1">.NET/C#, Python, Node.js, Microservices</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">IoT & Edge</span>
+                            <p class="mt-1">Azure IoT, Edge Computing, Sensors, MQTT</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Data & Databases</span>
+                            <p class="mt-1">SQL Server, Time-series DB, NoSQL, Data Modeling</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Analytics & BI</span>
+                            <p class="mt-1">Event Streaming, Data Lakes, ETL/ELT</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">UX & Interaction Design</span>
+                            <p class="mt-1">User-centered design, Prototyping, Wireframes</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Requirements & Process</span>
+                            <p class="mt-1">Requirements analysis, BPMN, User Stories, Process design</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Frameworks & Methods</span>
+                            <p class="mt-1">TOGAF, Archimate, C4, DDD, Agile</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Security & Compliance</span>
+                            <p class="mt-1">GDPR, IAM, Audit trails, Data Protection</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Hybrid Integration</span>
+                            <p class="mt-1">iPaaS, Enterprise Automation, API Gateway</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Integration Platforms</span>
+                            <p class="mt-1">Azure Integration, AWS, On-premise, Hybrid Cloud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="method" class="py-24 lg:py-32 bg-charcoal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-charcoal-400 text-sm tracking-wider uppercase">Method</span>
+                <h2 class="text-4xl font-display mt-4 mb-6">SAI Method™</h2>
+                <p class="text-charcoal-300">
+                    Systematic Architecture Implementation – our own method developed through 20+ years of practical architecture work. Technology and processes are the foundation, but it's the users who create business value. That's why adoption is central to every delivery.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-6">
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">01</div>
+                    <h3 class="text-lg font-semibold mb-3">Mapping</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Landscape Discovery</li>
+                        <li>• Stakeholder Alignment</li>
+                        <li>• Requirement Translation</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">02</div>
+                    <h3 class="text-lg font-semibold mb-3">Architecture Design</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Solution Architecture</li>
+                        <li>• Integration Patterns</li>
+                        <li>• Visual Documentation</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">03</div>
+                    <h3 class="text-lg font-semibold mb-3">Implementation</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Team Enablement</li>
+                        <li>• Quality Assurance</li>
+                        <li>• Standards</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">04</div>
+                    <h3 class="text-lg font-semibold mb-3">Adoption</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• User Involvement</li>
+                        <li>• Ambassadors</li>
+                        <li>• Change Management</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div>
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">05</div>
+                    <h3 class="text-lg font-semibold mb-3">Knowledge Transfer</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Capability Building</li>
+                        <li>• Documentation Handover</li>
+                        <li>• Continuous Improvement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-20 pt-12 border-t border-charcoal-800">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-light mb-2">40-60%</div>
+                        <div class="text-charcoal-400 text-sm">Faster time-to-market</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-light mb-2">30-50%</div>
+                        <div class="text-charcoal-400 text-sm">Lower integration costs</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-light mb-2">70-90%</div>
+                        <div class="text-charcoal-400 text-sm">Better documentation</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-light mb-2">3-5x</div>
+                        <div class="text-charcoal-400 text-sm">Faster onboarding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="cases" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mb-16">
+                <span class="text-charcoal-500 text-sm tracking-wider uppercase">Experience</span>
+                <h2 class="text-4xl font-display mt-4 mb-6 line-decoration">Cases</h2>
+                <p class="text-lg text-charcoal-600">
+                    20+ years of experience across varying industries and challenges.
+                </p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="flex flex-wrap gap-3 mb-12">
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-900 text-white" data-filter="all">All</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="integration">Integration</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="transformation">Transformation</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="architecture">Architecture</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="leadership">Leadership</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case: Volvo Connected Services -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Automotive Industry</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Connected Vehicle Services</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Three separate development teams worked on next-generation connected services without a shared architecture vision. Established cohesive integration architecture and coordinated API strategies that unified teams toward common design principles.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Azure IoT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Microservices</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">API Strategy</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Holistic view of entire service established</span>
+                    </div>
+                </div>
+
+                <!-- Case: Malmö Kommun -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="integration transformation architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Public Sector</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Municipal Digital Transformation</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Major system replacement of student systems in Sweden's third largest municipality. Sensitive IT environment with critical data protection and GDPR compliance requirements. Secure data flows across administrative boundaries with minimal disruption to educational services.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">GDPR</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Integration</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Governance</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Seamless migration without downtime</span>
+                    </div>
+                </div>
+
+                <!-- Case: MSF Global Health -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Humanitarian / Healthcare</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Global Health Information Platform</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Doctors Without Borders needed health data management that works in 70+ countries – often without stable internet. Architecture with offline capability, secure synchronization, and real-time monitoring from five operation centers across multiple continents.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Health IT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Offline-first</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Field Operations</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Reference architecture for humanitarian field operations</span>
+                    </div>
+                </div>
+
+                <!-- Case: European Refugee Crisis -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Crisis Management</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Information System During European Crisis</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        When the refugee crisis escalated in 2015, rapidly deployable systems were needed for coordination between UN agencies, authorities, and volunteer organizations. Mobile-optimized solutions for field workers with real-time coordination.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Crisis ICT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Rapid Deploy</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Multi-org</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Operational within 48 hours</span>
+                    </div>
+                </div>
+
+                <!-- Case: Lummelunda / PropTech -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">PropTech / Cleantech</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Smart Building IoT Platform</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Real estate industry lacked solutions for real-time energy optimization. Built complete IoT infrastructure from edge computing and sensors to cloud-based data analytics and decision support for property managers.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">IoT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Edge Computing</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Azure</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ From concept to commercial product</span>
+                    </div>
+                </div>
+
+                <!-- Case: HiQ iPaaS -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="leadership integration architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Enterprise Integration</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">iPaaS Competence Center</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Built HiQ's strategic initiative in integration platforms from the ground up. Identified market opportunities, established technical standards, and implemented iPaaS solutions for European enterprise customers.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">iPaaS</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">MuleSoft</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Team Building</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Integration standard for multiple customers</span>
+                    </div>
+                </div>
+
+                <!-- Case: Securitas -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="integration architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Security Industry</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">European B2B Customer Portal</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Europe-wide customer portal for Securitas with complex B2B system integrations. Security integration for an organization where security is core business – regulatory requirements across multiple markets.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">B2B Portal</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Multi-country</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Security</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Scalable platform across 10+ European markets</span>
+                    </div>
+                </div>
+
+                <!-- Case: CGI Energy -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Energy Sector</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">European Energy System Transformation</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Chief Technical Architect for CGI's modernization of business systems for European energy markets. 65 developers, four teams, system integrations for critical energy infrastructure based on regulatory market changes.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Enterprise</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">65 developers</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Regulatory</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Successful large-scale delivery</span>
+                    </div>
+                </div>
+
+                <!-- Case: IKEA -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Retail / Consumer</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">IKEA Home Planner 2</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Infrastructure architecture for IKEA's web application with millions of global users. Scalable Microsoft platform solution that balanced performance with business continuity for enterprise scale.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Global Scale</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Microsoft</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Performance</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Valuable reference document for IKEA development</span>
+                    </div>
+                </div>
+
+                <!-- Case: Sony Mobile -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Telecom / Mobile</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Global Cost Management Portal</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Enterprise portal for Sony Mobile with consolidated cost overview for global mobile operations. Integration toward multiple backend systems and business systems for real-time reporting.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Enterprise Portal</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Cost Management</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">.NET</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Consolidated global cost overview</span>
+                    </div>
+                </div>
+
+                <!-- Case: DSB -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="integration architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Transport / Public Transit</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Railway Payment Solutions</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Architecture and development of payment solutions for DSB, Denmark's national railway operator. Secure integrations with high requirements for availability and transaction volume.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Payments</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">High Availability</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Security</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Secure payment transactions at production scale</span>
+                    </div>
+                </div>
+
+                <!-- Case: UNESCO -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">International Development</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">UNESCO Education Infrastructure</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Multimedia and broadcasting infrastructure for UNESCO in Sri Lanka and India after the 2004 tsunami. Implementation, installation, and knowledge transfer to local staff at eight stations.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Broadcasting</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Field Work</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Training</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ 8 stations operational with local expertise</span>
+                    </div>
+                </div>
+
+                <!-- Case: Central African Republic -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Humanitarian / Field Operations</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Epidemiological Data Analysis in Conflict Zone</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Health surveillance system for Central African Republic – data collection and transmission during active conflict. Resilient solutions optimized for low bandwidth and unreliable network connections.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Health Surveillance</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Low Bandwidth</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Resilient</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Epidemiological analysis during crises</span>
+                    </div>
+                </div>
+
+                <!-- Case: Requirements & Process Design -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Requirements Management</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Requirements-to-Architecture Transformation</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Business needs were missing from technical decisions. Structured requirements analysis with BPMN modeling of business processes as foundation for architecture decisions. Traceability from business goals to system components.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Requirements analysis</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">BPMN</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Traceability</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Structured connection between business and technology</span>
+                    </div>
+                </div>
+
+                <!-- Case: Data Modeling -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Data & Databases</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Enterprise Data Modeling</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Fragmented data sources without common concept model. Conceptual and logical data modeling with master data strategy. From isolated systems to coherent information architecture.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Data Modeling</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Master Data</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">SQL Server</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Common concept model established</span>
+                    </div>
+                </div>
+
+                <!-- Case: Technical Documentation -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Documentation & Design</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Architecture Documentation with C4</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Development teams without a shared picture of the system landscape. Introduced C4 Model for visual architecture documentation – from context to code. Living documentation that evolves with development.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">C4 Model</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">PlantUML</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Docs-as-Code</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Faster onboarding of new developers</span>
+                    </div>
+                </div>
+
+                <!-- Case: Legacy Modernization -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Software Development</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Legacy Modernization</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Business-critical system on outdated technology stack with no big-bang migration option. Strangler Fig pattern with gradual phase-out. New microservices in .NET Core alongside legacy.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">.NET Core</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Strangler Fig</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Migration</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Risk-free modernization without downtime</span>
+                    </div>
+                </div>
+
+                <!-- Case: API Strategy -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">API & Integration</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">API Strategy & Governance</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Inconsistent integrations without standards. Established API-first approach with OpenAPI specifications, versioning, and lifecycle management. Developer portal for internal and external consumption.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">API Design</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">OpenAPI</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Governance</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Standardized APIs across the organization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 lg:py-32 bg-charcoal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-charcoal-400 text-sm tracking-wider uppercase">What customers say</span>
+                <h2 class="text-4xl font-display mt-4 mb-6">Testimonials</h2>
+                <p class="text-charcoal-300">
+                    Long-term relationships built on delivery and trust.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial: Volvo - Anders -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "A key player in the project – we wouldn't be where we are today without this expertise. Creates a holistic view of the entire service and takes initiative to develop team members."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Anders Kristensen</div>
+                            <div class="text-charcoal-400 text-sm">Acting Portfolio Manager, Volvo Connected Services</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: MSF -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Excellent knowledge across a broad spectrum of IT issues – from hardware and software to infrastructure and field challenges. Makes complex knowledge understandable for different audiences."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Dr. Philippe Cavailler</div>
+                            <div class="text-charcoal-400 text-sm">Director of IU, Doctors Without Borders (MSF Switzerland)</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: IKEA -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "The report became a valuable reference document that guided our choices and development. Successfully filled multiple key roles in the project."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Ing-Marie Olsén</div>
+                            <div class="text-charcoal-400 text-sm">Team Lead, IKEA Home Planner</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Volvo - Henrik -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Great expertise and a strong knowledge base. Delivers according to expectations and balances the team with experience and a humble, supportive personality."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Henrik Linger</div>
+                            <div class="text-charcoal-400 text-sm">Project Manager Engineering, Volvo</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Volvo - Karin -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Delivers results continuously. Takes initiative and works progressively toward set goals. With a holistic understanding, drives and coaches forward."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Karin Lindbom</div>
+                            <div class="text-charcoal-400 text-sm">Scrum Master, Volvo Group D&IT</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Capgemini - Henrik -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Performed the assignment with responsibility and commitment, which has always resulted in excellent results. Reliable delivery of high quality."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Henrik Sellberg</div>
+                            <div class="text-charcoal-400 text-sm">Team Manager, Capgemini</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: IKEA - Jan -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Quickly became a critical resource on the project. Technical skills combined with results-oriented and independent work style. Takes initiative on process improvements appreciated by everyone."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Jan Ruthberg</div>
+                            <div class="text-charcoal-400 text-sm">IT Project Manager, IKEA Home Planner 2</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Capgemini - Åsa -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Broad expertise, works effectively and quickly finds tasks and solutions. Very structured and methodical – proposes and develops comprehensive solutions and architecture on own initiative."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Åsa Melvanius</div>
+                            <div class="text-charcoal-400 text-sm">Head of Mobile Solutions, Capgemini</div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Performance Summary -->
+            <div class="mt-16 pt-12 border-t border-charcoal-700">
+                <div class="text-center mb-8">
+                    <span class="text-charcoal-400 text-sm uppercase tracking-wider">Latest Evaluation</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Practical Knowledge</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Initiative & Productivity</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Team Collaboration</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Delivery Quality</div>
+                    </div>
+                </div>
+                <p class="text-center text-charcoal-500 text-sm mt-6">Based on independent evaluations from Volvo Connected Services (2023)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 lg:py-32 bg-charcoal-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <span class="text-charcoal-500 text-sm tracking-wider uppercase">About</span>
+                    <h2 class="text-4xl font-display mt-4 mb-6">Boutique consulting with senior expertise</h2>
+                    <p class="text-lg text-charcoal-600 mb-6">
+                        Our expertise lies in understanding business processes and grounding them in the right technology. Creating solution architectures that handle complexity. Documenting and communicating so everyone understands – from developers to executives.
+                    </p>
+                    <p class="text-charcoal-600 mb-8">
+                        We're involved throughout the entire chain: strategy, design, development, testing, and operations. The consultant you meet is the one who delivers.
+                    </p>
+
+                    <blockquote class="border-l-2 border-charcoal-900 pl-6 italic text-lg text-charcoal-700 my-8">
+                        "Architecture is not about technology – it's about creating the conditions for the business to succeed."
+                    </blockquote>
+
+                    <div class="flex gap-8 text-sm text-charcoal-600">
+                        <div>
+                            <span class="font-semibold block text-charcoal-900">Based in</span>
+                            Stockholm / Visby
+                        </div>
+                        <div>
+                            <span class="font-semibold block text-charcoal-900">Work Model</span>
+                            Hybrid / Remote
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-white p-8">
+                        <h3 class="font-semibold text-lg mb-4">Our Values</h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-medium">Real Business Value</h4>
+                                    <p class="text-sm text-charcoal-600">Changes that create measurable results – not technology for technology's sake.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-medium">Small Steps, Right Direction</h4>
+                                    <p class="text-sm text-charcoal-600">Iterative improvements toward long-term goals. Each delivery builds forward.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-medium">Knowledge Transfer</h4>
+                                    <p class="text-sm text-charcoal-600">Your organization should stand stronger when the engagement ends.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-medium">Transparency</h4>
+                                    <p class="text-sm text-charcoal-600">Clarity about capabilities, limitations, and expectations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32 bg-charcoal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <span class="text-charcoal-400 text-sm tracking-wider uppercase">Contact</span>
+                <h2 class="text-4xl font-display mt-4 mb-6">Let's Talk</h2>
+                <p class="text-charcoal-300 mb-12">
+                    We're happy to have a preliminary conversation to understand your challenges and see if we're a good match.
+                </p>
+
+                <div class="grid sm:grid-cols-3 gap-8 mb-12">
+                    <div>
+                        <div class="text-charcoal-500 text-xs uppercase tracking-wider mb-2">Email</div>
+                        <a href="mailto:claes-philip@staiger.se" class="text-white hover:text-charcoal-300 transition-colors">
+                            claes-philip@staiger.se
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-charcoal-500 text-xs uppercase tracking-wider mb-2">Phone</div>
+                        <a href="tel:+46766555005" class="text-white hover:text-charcoal-300 transition-colors">
+                            +46 766 555 005
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-charcoal-500 text-xs uppercase tracking-wider mb-2">Web</div>
+                        <a href="https://staiger.se" class="text-white hover:text-charcoal-300 transition-colors">
+                            staiger.se
+                        </a>
+                    </div>
+                </div>
+
+                <a href="mailto:claes-philip@staiger.se" class="inline-flex items-center justify-center px-8 py-4 bg-white text-charcoal-900 font-medium hover:bg-charcoal-100 transition-colors">
+                    Send a Message
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-950 text-charcoal-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-xs tracking-wider uppercase text-charcoal-300">Claes Philip Staiger</div>
+                <div class="text-sm">
+                    Stockholm | Visby
+                </div>
+                <div class="text-sm">
+                    © 2026 Claes-Philip Staiger
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Simple fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Case filter functionality
+        const filterButtons = document.querySelectorAll('.case-filter');
+        const caseCards = document.querySelectorAll('.case-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button style
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-charcoal-900', 'text-white');
+                    btn.classList.add('bg-charcoal-100', 'text-charcoal-700');
+                });
+                button.classList.remove('bg-charcoal-100', 'text-charcoal-700');
+                button.classList.add('bg-charcoal-900', 'text-white');
+
+                // Filter cases
+                const filter = button.dataset.filter;
+                caseCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

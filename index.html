@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C. | Claes-Philip Staiger | Technology • Consulting • Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: {
+                            50: '#f6f6f6',
+                            100: '#e7e7e7',
+                            200: '#d1d1d1',
+                            300: '#b0b0b0',
+                            400: '#888888',
+                            500: '#6d6d6d',
+                            600: '#5d5d5d',
+                            700: '#4f4f4f',
+                            800: '#3d3d3d',
+                            900: '#2d2d2d',
+                            950: '#1a1a1a',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .line-decoration::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #3d3d3d;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-charcoal-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-charcoal-900/95 backdrop-blur-sm border-b border-charcoal-700/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo placeholder -->
+                <a href="#" class="flex items-center">
+                    <!-- Logo will go here -->
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#services" class="text-charcoal-300 hover:text-white text-sm transition-colors">Tjänster</a>
+                    <a href="#architecture" class="text-charcoal-300 hover:text-white text-sm transition-colors">Arkitektur</a>
+                    <a href="#cases" class="text-charcoal-300 hover:text-white text-sm transition-colors">Cases</a>
+                    <a href="#testimonials" class="text-charcoal-300 hover:text-white text-sm transition-colors">Referenser</a>
+                    <a href="#about" class="text-charcoal-300 hover:text-white text-sm transition-colors">Om oss</a>
+                    <a href="#contact" class="ml-4 px-5 py-2.5 bg-white text-charcoal-900 text-sm font-medium hover:bg-charcoal-100 transition-colors">
+                        Kontakt
+                    </a>
+                    <a href="en.html" class="text-charcoal-300 hover:text-white text-sm transition-colors font-medium">EN</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal-900 border-t border-charcoal-700">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#services" class="block text-charcoal-300 hover:text-white py-2">Tjänster</a>
+                <a href="#architecture" class="block text-charcoal-300 hover:text-white py-2">Arkitektur</a>
+                <a href="#cases" class="block text-charcoal-300 hover:text-white py-2">Cases</a>
+                <a href="#testimonials" class="block text-charcoal-300 hover:text-white py-2">Referenser</a>
+                <a href="#about" class="block text-charcoal-300 hover:text-white py-2">Om oss</a>
+                <a href="#contact" class="block text-white font-medium py-2">Kontakt →</a>
+                <a href="en.html" class="block text-charcoal-300 hover:text-white py-2">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-charcoal-900 flex items-center relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-72 h-72 border border-white rounded-full"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 border border-white rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-10">
+            <div class="max-w-3xl fade-in">
+                <!-- Company Name -->
+                <div class="mb-12">
+                    <div class="text-lg tracking-[0.2em] uppercase text-white font-medium">Claes Philip Staiger</div>
+                    <div class="text-sm tracking-[0.3em] uppercase text-charcoal-400 mt-2">Technology | Consulting | Innovation</div>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-light text-white mb-8 leading-tight">
+                    Arkitektur som skapar<br>
+                    <span class="gradient-text">verkligt värde</span>
+                </h1>
+
+                <p class="text-xl text-charcoal-300 mb-12 max-w-2xl leading-relaxed">
+                    Vi hjälper organisationer navigera teknisk komplexitet och bygga arkitekturer som håller över tid. 20+ års erfarenhet från enterprise-transformationer till startup-skalning.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-charcoal-900 font-medium hover:bg-charcoal-100 transition-colors">
+                        Boka ett samtal
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-charcoal-600 text-white hover:bg-charcoal-800 transition-colors">
+                        Utforska tjänster
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-charcoal-500 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mb-16">
+                <span class="text-charcoal-500 text-sm tracking-wider uppercase">Tjänster</span>
+                <h2 class="text-4xl font-display mt-4 mb-6 line-decoration">What We Offer</h2>
+                <p class="text-lg text-charcoal-600">
+                    Tjänster som tar er från nuvarande tillstånd till önskad målbild – med strategisk höjd och praktisk hands-on-förmåga.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Arkitektur & Strategi</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        Från enterprise-översikter till detaljerade integrationsmönster. Vi designar lösningar som balanserar affärsbehov med teknisk hållbarhet.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Transformation & Modernisering</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        Vi guidar organisationer genom komplexa transformationsresor – från legacy till cloud-native, från silos till integrerade ekosystem.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Arkitekturfunktion & Governance</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        Vi hjälper er bygga intern arkitekturkompetens och etablera strukturer som säkerställer långsiktig teknisk excellence.
+                    </p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="group p-8 bg-charcoal-50 hover:bg-charcoal-900 transition-all duration-300 card-hover">
+                    <div class="w-12 h-12 bg-charcoal-900 group-hover:bg-white flex items-center justify-center mb-6 transition-colors">
+                        <svg class="w-6 h-6 text-white group-hover:text-charcoal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-white transition-colors">Rådgivning & Hands-on Stöd</h3>
+                    <p class="text-charcoal-600 group-hover:text-charcoal-300 transition-colors">
+                        Flexibelt engagemang – från strategisk rådgivning till embedded arkitektstöd. Senior kompetens genom hela uppdraget.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="py-24 lg:py-32 bg-charcoal-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-charcoal-500 text-sm tracking-wider uppercase">Arkitektur</span>
+                    <h2 class="text-4xl font-display mt-4 mb-6">Architecture Services</h2>
+                    <p class="text-lg text-charcoal-600 mb-8">
+                        Arkitekturtjänster för varje nivå av er organisation – från strategisk enterprise-arkitektur till hands-on lösningsdesign.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-900"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Enterprise Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">Strategisk arkitektur med TOGAF, Archimate, roadmaps och governance.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-400"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Solution Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">Design av lösningar som är tekniskt robusta och affärsmässigt relevanta.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-400"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Integration Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">API-design, event-driven arkitektur. Azure, MuleSoft, Kafka.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-1 bg-charcoal-400"></div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Information Architecture</h4>
+                                <p class="text-charcoal-600 text-sm">Datamodeller, masterdata, taxonomier, metadata-strategier och informationsflöden.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-charcoal-900 p-10 text-white">
+                    <h3 class="text-2xl font-display mb-6">Technology & Platforms</h3>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-sm">
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Integration & Middleware</span>
+                            <p class="mt-1">MuleSoft, Kafka, Flowfuse, FRENDS, ESB</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Cloud & Infrastructure</span>
+                            <p class="mt-1">Azure, AWS, Kubernetes, Docker, IaC</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Systemutveckling</span>
+                            <p class="mt-1">.NET/C#, Python, Node.js, Microservices</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">IoT & Edge</span>
+                            <p class="mt-1">Azure IoT, Edge Computing, Sensorer, MQTT</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Data & Databaser</span>
+                            <p class="mt-1">SQL Server, Tidsserie-DB, NoSQL, Datamodellering</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Analytics & BI</span>
+                            <p class="mt-1">Event Streaming, Data Lakes, ETL/ELT</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">UX & Interaktionsdesign</span>
+                            <p class="mt-1">Användarcentrerad design, Prototyping, Wireframes</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Krav & Process</span>
+                            <p class="mt-1">Kravanalys, BPMN, User Stories, Processdesign</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Ramverk & Metoder</span>
+                            <p class="mt-1">TOGAF, Archimate, C4, DDD, Agile</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Säkerhet & Compliance</span>
+                            <p class="mt-1">GDPR, IAM, Audit trails, Dataskydd</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Hybrid Integration</span>
+                            <p class="mt-1">iPaaS, Enterprise Automation, API Gateway</p>
+                        </div>
+                        <div>
+                            <span class="text-charcoal-400 uppercase tracking-wider text-xs">Integrationsplattformar</span>
+                            <p class="mt-1">Azure Integration, AWS, On-premise, Hybrid Cloud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="method" class="py-24 lg:py-32 bg-charcoal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-charcoal-400 text-sm tracking-wider uppercase">Metod</span>
+                <h2 class="text-4xl font-display mt-4 mb-6">SAI-metoden™</h2>
+                <p class="text-charcoal-300">
+                    Systematic Architecture Implementation – vår egen metod utvecklad genom 20+ års praktiskt arkitekturarbete. Teknik och processer är grunden, men det är användarna som skapar affärsvärdet. Därför är förankring central i varje leverans.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-5 gap-6">
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">01</div>
+                    <h3 class="text-lg font-semibold mb-3">Kartläggning</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Landscape Discovery</li>
+                        <li>• Stakeholder Alignment</li>
+                        <li>• Requirement Translation</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">02</div>
+                    <h3 class="text-lg font-semibold mb-3">Arkitekturdesign</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Solution Architecture</li>
+                        <li>• Integration Patterns</li>
+                        <li>• Visual Documentation</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">03</div>
+                    <h3 class="text-lg font-semibold mb-3">Implementation</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Team Enablement</li>
+                        <li>• Quality Assurance</li>
+                        <li>• Standards</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div class="relative">
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">04</div>
+                    <h3 class="text-lg font-semibold mb-3">Förankring</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Användarinvolvering</li>
+                        <li>• Ambassadörer</li>
+                        <li>• Change Management</li>
+                    </ul>
+                    <div class="hidden md:block absolute top-8 -right-3 w-6 h-px bg-charcoal-700"></div>
+                </div>
+
+                <div>
+                    <div class="text-6xl font-light text-charcoal-700 mb-4">05</div>
+                    <h3 class="text-lg font-semibold mb-3">Kunskapsöverföring</h3>
+                    <ul class="text-charcoal-400 text-sm space-y-2">
+                        <li>• Capability Building</li>
+                        <li>• Documentation Handover</li>
+                        <li>• Continuous Improvement</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mt-20 pt-12 border-t border-charcoal-800">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-light mb-2">40-60%</div>
+                        <div class="text-charcoal-400 text-sm">Snabbare time-to-market</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-light mb-2">30-50%</div>
+                        <div class="text-charcoal-400 text-sm">Lägre integrationskostnader</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-light mb-2">70-90%</div>
+                        <div class="text-charcoal-400 text-sm">Bättre dokumentation</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-light mb-2">3-5x</div>
+                        <div class="text-charcoal-400 text-sm">Snabbare onboarding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section id="cases" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mb-16">
+                <span class="text-charcoal-500 text-sm tracking-wider uppercase">Erfarenhet</span>
+                <h2 class="text-4xl font-display mt-4 mb-6 line-decoration">Cases</h2>
+                <p class="text-lg text-charcoal-600">
+                    20+ års erfarenhet från varierande branscher och utmaningar.
+                </p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="flex flex-wrap gap-3 mb-12">
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-900 text-white" data-filter="all">Alla</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="integration">Integration</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="transformation">Transformation</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="architecture">Arkitektur</button>
+                <button class="case-filter px-4 py-2 text-sm font-medium bg-charcoal-100 text-charcoal-700 hover:bg-charcoal-200" data-filter="leadership">Ledarskap</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case: Volvo Connected Services -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Fordonsindustri</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Connected Vehicle Services</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Tre separata utvecklingsteam arbetade på nästa generations connected services utan gemensam arkitekturvision. Etablerade sammanhållen integrationsarkitektur och koordinerade API-strategier som förenade teamen mot gemensamma designprinciper.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Azure IoT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Microservices</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">API Strategy</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Helhetssyn över hela tjänsten etablerad</span>
+                    </div>
+                </div>
+
+                <!-- Case: Malmö Kommun -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="integration transformation architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Offentlig sektor</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Kommunal Digital Transformation</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Stort systembyte av elevsystem i Sveriges tredje största kommun. Känslig IT-miljö med kritiska krav på dataskydd och GDPR-compliance. Säkra dataflöden över förvaltningsgränser med minimal störning av utbildningstjänster.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">GDPR</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Integration</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Governance</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Sömlös migration utan avbrott</span>
+                    </div>
+                </div>
+
+                <!-- Case: MSF Global Health -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Humanitär / Healthcare</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Global Hälsoinformationsplattform</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Läkare Utan Gränser behövde hälsodatahantering som fungerar i 70+ länder – ofta utan stabil internet. Arkitektur med offline-kapacitet, säker synkronisering och realtidsövervakning från fem operationscenter över flera kontinenter.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Health IT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Offline-first</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Field Operations</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Referensarkitektur för humanitära fältoperationer</span>
+                    </div>
+                </div>
+
+                <!-- Case: European Refugee Crisis -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Krishantering</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Informationssystem under Europeisk Kris</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        När flyktingkrisen eskalerade 2015 krävdes snabbinstallerbara system för koordinering mellan FN-organ, myndigheter och frivilligorganisationer. Mobil-anpassade lösningar för fältarbetare med realtidskoordinering.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Crisis ICT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Rapid Deploy</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Multi-org</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Operativt på under 48 timmar</span>
+                    </div>
+                </div>
+
+                <!-- Case: Lummelunda / PropTech -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">PropTech / Cleantech</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Smart Building IoT-plattform</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Fastighetsbranschen saknade lösningar för realtids-energioptimering. Byggde komplett IoT-infrastruktur från edge computing och sensorer till molnbaserad dataanalys och beslutstöd för fastighetsförvaltare.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">IoT</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Edge Computing</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Azure</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Från koncept till kommersiell produkt</span>
+                    </div>
+                </div>
+
+                <!-- Case: HiQ iPaaS -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="leadership integration architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Enterprise Integration</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">iPaaS Competence Center</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Byggde upp HiQs strategiska satsning inom integrationsplattformar från grunden. Identifierade marknadsmöjligheter, etablerade tekniska standarder och implementerade iPaaS-lösningar för europeiska företagskunder.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">iPaaS</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">MuleSoft</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Team Building</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Integrationsstandard för flera kunder</span>
+                    </div>
+                </div>
+
+                <!-- Case: Securitas -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="integration architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Säkerhetsbranschen</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Europeisk B2B-kundportal</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Europaomfattande kundportal för Securitas med komplexa B2B-systemintegrationer. Säkerhetsintegration för organisation där säkerhet är kärnverksamheten – regulatoriska krav över flera marknader.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">B2B Portal</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Multi-country</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Security</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Skalbar plattform över 10+ europeiska marknader</span>
+                    </div>
+                </div>
+
+                <!-- Case: CGI Energy -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Energisektor</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Europeisk Energisystem-transformation</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Teknisk huvudarkitekt för CGIs modernisering av affärssystem för europeisk energimarknad. 65 utvecklare, fyra team, systemintegrationer för kritisk energiinfrastruktur baserat på regulatoriska marknadsförändringar.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Enterprise</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">65 developers</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Regulatory</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Framgångsrik storskalig leverans</span>
+                    </div>
+                </div>
+
+                <!-- Case: IKEA -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Retail / Consumer</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">IKEA Home Planner 2</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Infrastrukturarkitektur för IKEAs webbapplikation med miljontals globala användare. Skalbar Microsoft-plattformslösning som balanserade prestanda med affärskontinuitet för enterprise-skala.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Global Scale</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Microsoft</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Performance</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Värdefullt referensdokument för IKEAs utveckling</span>
+                    </div>
+                </div>
+
+                <!-- Case: Sony Mobile -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Telecom / Mobile</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Global Kostnadshanteringsportal</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Enterprise-portal för Sony Mobile med konsoliderad kostnadsöverblick för global mobilverksamhet. Integration mot multipla backend-system och affärssystem för realtidsrapportering.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Enterprise Portal</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Cost Management</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">.NET</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Konsoliderad global kostnadsöverblick</span>
+                    </div>
+                </div>
+
+                <!-- Case: DSB -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="integration architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Transport / Kollektivtrafik</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Betalningslösningar Järnväg</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Arkitektur och utveckling av betalningslösningar för DSB, Danmarks nationella järnvägsoperatör. Säkra integrationer med höga krav på tillgänglighet och transaktionsvolym.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Payments</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">High Availability</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Security</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Säkra betaltransaktioner i produktionsskala</span>
+                    </div>
+                </div>
+
+                <!-- Case: UNESCO -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation architecture">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Internationell utveckling</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">UNESCO Utbildningsinfrastruktur</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Multimedia- och broadcasting-infrastruktur för UNESCO i Sri Lanka och Indien efter tsunamin 2004. Implementation, installation och kunskapsöverföring till lokal personal på åtta stationer.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Broadcasting</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Field Work</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Training</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ 8 stationer i drift med lokal kompetens</span>
+                    </div>
+                </div>
+
+                <!-- Case: Central African Republic -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Humanitär / Fältoperationer</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Epidemiologisk Dataanalys i Konfliktzon</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Hälsoövervakningssystem för Centralafrikanska Republiken – datainsamling och överföring under aktiv konflikt. Motståndskraftiga lösningar optimerade för låg bandbredd och opålitliga nätanslutningar.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Health Surveillance</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Low Bandwidth</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Resilient</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Epidemiologisk analys under kriser</span>
+                    </div>
+                </div>
+
+                <!-- Case: Requirements & Process Design -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture transformation">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Kravhantering</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Krav-till-Arkitektur Transformation</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Verksamhetens behov saknades i tekniska beslut. Strukturerad kravanalys med BPMN-modellering av affärsprocesser som grund för arkitekturbeslut. Traceability från verksamhetsmål till systemkomponenter.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Kravanalys</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">BPMN</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Traceability</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Strukturerad koppling verksamhet–teknik</span>
+                    </div>
+                </div>
+
+                <!-- Case: Data Modeling -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Data & Databaser</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Enterprise Datamodellering</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Fragmenterade datakällor utan gemensam begreppsmodell. Konceptuell och logisk datamodellering med masterdata-strategi. Från isolerade system till sammanhängande informationsarkitektur.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Datamodellering</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Master Data</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">SQL Server</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Gemensam begreppsmodell etablerad</span>
+                    </div>
+                </div>
+
+                <!-- Case: Technical Documentation -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture leadership">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Dokumentation & Design</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Arkitekturdokumentation med C4</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Utvecklingsteam utan gemensam bild av systemlandskapet. Införde C4 Model för visuell arkitekturdokumentation – från kontext till kod. Levande dokumentation som följer med i utvecklingen.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">C4 Model</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">PlantUML</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Docs-as-Code</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Snabbare onboarding av nya utvecklare</span>
+                    </div>
+                </div>
+
+                <!-- Case: Legacy Modernization -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="transformation architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">Systemutveckling</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">Legacy-modernisering</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Affärskritiskt system på åldrad teknikstack utan möjlighet till big-bang-migration. Strangler Fig-pattern med gradvis utfasning. Nya microservices i .NET Core parallellt med legacy.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">.NET Core</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Strangler Fig</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Migration</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Riskfri modernisering utan avbrott</span>
+                    </div>
+                </div>
+
+                <!-- Case: API Strategy -->
+                <div class="case-card group border border-charcoal-200 p-8 hover:border-charcoal-900 transition-colors" data-category="architecture integration">
+                    <span class="text-xs font-medium text-charcoal-500 uppercase tracking-wider">API & Integration</span>
+                    <h3 class="text-xl font-semibold mt-3 mb-3">API-strategi & Governance</h3>
+                    <p class="text-charcoal-600 text-sm mb-6">
+                        Spretiga integrationer utan standards. Etablerade API-first approach med OpenAPI-specifikationer, versionering och livscykelhantering. Developer portal för intern och extern konsumtion.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">API Design</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">OpenAPI</span>
+                        <span class="text-xs bg-charcoal-100 px-2 py-1">Governance</span>
+                    </div>
+                    <div class="pt-4 border-t border-charcoal-100">
+                        <span class="text-sm font-medium text-charcoal-900">✓ Standardiserade API:er över organisationen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 lg:py-32 bg-charcoal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-charcoal-400 text-sm tracking-wider uppercase">Vad kunder säger</span>
+                <h2 class="text-4xl font-display mt-4 mb-6">Testimonials</h2>
+                <p class="text-charcoal-300">
+                    Långsiktiga relationer byggda på leverans och förtroende.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial: Volvo - Anders -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "En nyckelspelare i projektet – vi skulle inte vara där vi är idag utan denna kompetens. Skapar helhetssyn över hela tjänsten och tar initiativ till att utveckla teammedlemmar."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Anders Kristensen</div>
+                            <div class="text-charcoal-400 text-sm">Acting Portfolio Manager, Volvo Connected Services</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: MSF -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Utmärkta kunskaper inom ett brett spektrum av IT-frågor – från hårdvara och mjukvara till infrastruktur och fältutmaningar. Gör komplex kunskap begriplig för olika målgrupper."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Dr. Philippe Cavailler</div>
+                            <div class="text-charcoal-400 text-sm">Director of IU, Läkare Utan Gränser (MSF Switzerland)</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: IKEA -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Rapporten blev ett värdefullt referensdokument som har styrt vårt val och vår utveckling. Framgångsrikt fyllt flera nyckelroller i projektet."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Ing-Marie Olsén</div>
+                            <div class="text-charcoal-400 text-sm">Teamchef, IKEA Home Planner</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Volvo - Henrik -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Stor kompetens och en stark kunskapsbas. Levererar enligt förväntningar och balanserar teamet med erfarenhet och en ödmjuk, stöttande personlighet."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Henrik Linger</div>
+                            <div class="text-charcoal-400 text-sm">Project Manager Engineering, Volvo</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Volvo - Karin -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Levererar resultat kontinuerligt. Tar initiativ och arbetar progressivt mot uppsatta mål. Med en holistisk förståelse driver och coachar framåt."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Karin Lindbom</div>
+                            <div class="text-charcoal-400 text-sm">Scrum Master, Volvo Group D&IT</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Capgemini - Henrik -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Utfört uppdraget med ansvarskänsla och engagemang, vilket alltid resulterat i utmärkta resultat. Pålitlig leverans av hög kvalitet."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Henrik Sellberg</div>
+                            <div class="text-charcoal-400 text-sm">Team Manager, Capgemini</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: IKEA - Jan -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Blev snabbt en kritisk resurs inom projektet. Tekniska färdigheter kombinerat med resultatorienterat och självständigt arbetssätt. Tar initiativ till process-förbättringar som uppskattas av alla."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Jan Ruthberg</div>
+                            <div class="text-charcoal-400 text-sm">IT Project Manager, IKEA Home Planner 2</div>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <!-- Testimonial: Capgemini - Åsa -->
+                <div class="bg-charcoal-800 p-8 relative">
+                    <div class="text-5xl text-charcoal-700 font-serif absolute top-4 left-6">"</div>
+                    <blockquote class="relative z-10 pt-6">
+                        <p class="text-charcoal-200 mb-6 italic">
+                            "Bred expertis, arbetar effektivt och hittar snabbt sina uppgifter och lösningar. Mycket strukturerad och metodisk – föreslår och utvecklar på eget initiativ heltäckande lösningar och arkitektur."
+                        </p>
+                        <footer>
+                            <div class="font-medium text-white">Åsa Melvanius</div>
+                            <div class="text-charcoal-400 text-sm">Head of Mobile Solutions, Capgemini</div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Performance Summary -->
+            <div class="mt-16 pt-12 border-t border-charcoal-700">
+                <div class="text-center mb-8">
+                    <span class="text-charcoal-400 text-sm uppercase tracking-wider">Senaste utvärdering</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Praktisk kunskap</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Initiativ & produktivitet</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Teamsamarbete</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-semibold text-white mb-1">Excellent</div>
+                        <div class="text-charcoal-400 text-sm">Kvalitet på leverans</div>
+                    </div>
+                </div>
+                <p class="text-center text-charcoal-500 text-sm mt-6">Baserat på oberoende utvärderingar från Volvo Connected Services (2023)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 lg:py-32 bg-charcoal-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <span class="text-charcoal-500 text-sm tracking-wider uppercase">Om oss</span>
+                    <h2 class="text-4xl font-display mt-4 mb-6">Boutique-konsulting med senior kompetens</h2>
+                    <p class="text-lg text-charcoal-600 mb-6">
+                        Vår expertis ligger i att förstå affärsprocesser och förankra dem i rätt teknik. Skapa lösningsarkitekturer som hanterar komplexitet. Dokumentera och kommunicera så att alla förstår – från utvecklare till ledning.
+                    </p>
+                    <p class="text-charcoal-600 mb-8">
+                        Vi är med genom hela kedjan: strategi, design, utveckling, test och förvaltning. Den konsult ni möter är den som genomför uppdraget.
+                    </p>
+
+                    <blockquote class="border-l-2 border-charcoal-900 pl-6 italic text-lg text-charcoal-700 my-8">
+                        "Arkitektur handlar inte om teknik – det handlar om att skapa förutsättningar för verksamheten att lyckas."
+                    </blockquote>
+
+                    <div class="flex gap-8 text-sm text-charcoal-600">
+                        <div>
+                            <span class="font-semibold block text-charcoal-900">Baserade i</span>
+                            Stockholm / Visby
+                        </div>
+                        <div>
+                            <span class="font-semibold block text-charcoal-900">Arbetsmodell</span>
+                            Hybrid / Remote
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-white p-8">
+                        <h3 class="font-semibold text-lg mb-4">Våra värderingar</h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-medium">Verkligt affärsvärde</h4>
+                                    <p class="text-sm text-charcoal-600">Förändringar som skapar mätbart resultat – inte teknik för teknikens skull.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-medium">Små steg, rätt riktning</h4>
+                                    <p class="text-sm text-charcoal-600">Iterativa förbättringar mot långsiktiga mål. Varje leverans bygger vidare.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-medium">Kunskapsöverföring</h4>
+                                    <p class="text-sm text-charcoal-600">Er organisation ska stå starkare när uppdraget är slut.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-8 h-8 bg-charcoal-900 text-white flex items-center justify-center text-sm flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-medium">Transparens</h4>
+                                    <p class="text-sm text-charcoal-600">Tydlighet om förmågor, begränsningar och förväntningar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32 bg-charcoal-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <span class="text-charcoal-400 text-sm tracking-wider uppercase">Kontakt</span>
+                <h2 class="text-4xl font-display mt-4 mb-6">Låt oss prata</h2>
+                <p class="text-charcoal-300 mb-12">
+                    Vi tar gärna ett förutsättningslöst samtal för att förstå era utmaningar och se om vi är rätt match.
+                </p>
+
+                <div class="grid sm:grid-cols-3 gap-8 mb-12">
+                    <div>
+                        <div class="text-charcoal-500 text-xs uppercase tracking-wider mb-2">E-post</div>
+                        <a href="mailto:claes-philip@staiger.se" class="text-white hover:text-charcoal-300 transition-colors">
+                            claes-philip@staiger.se
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-charcoal-500 text-xs uppercase tracking-wider mb-2">Telefon</div>
+                        <a href="tel:+46766555005" class="text-white hover:text-charcoal-300 transition-colors">
+                            +46 766 555 005
+                        </a>
+                    </div>
+                    <div>
+                        <div class="text-charcoal-500 text-xs uppercase tracking-wider mb-2">Webb</div>
+                        <a href="https://staiger.se" class="text-white hover:text-charcoal-300 transition-colors">
+                            staiger.se
+                        </a>
+                    </div>
+                </div>
+
+                <a href="mailto:claes-philip@staiger.se" class="inline-flex items-center justify-center px-8 py-4 bg-white text-charcoal-900 font-medium hover:bg-charcoal-100 transition-colors">
+                    Skicka ett meddelande
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-950 text-charcoal-400 py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-xs tracking-wider uppercase text-charcoal-300">Claes Philip Staiger</div>
+                <div class="text-sm">
+                    Stockholm | Visby
+                </div>
+                <div class="text-sm">
+                    © 2026 Claes-Philip Staiger
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        // Simple fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Case filter functionality
+        const filterButtons = document.querySelectorAll('.case-filter');
+        const caseCards = document.querySelectorAll('.case-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button style
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-charcoal-900', 'text-white');
+                    btn.classList.add('bg-charcoal-100', 'text-charcoal-700');
+                });
+                button.classList.remove('bg-charcoal-100', 'text-charcoal-700');
+                button.classList.add('bg-charcoal-900', 'text-white');
+
+                // Filter cases
+                const filter = button.dataset.filter;
+                caseCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category.includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
