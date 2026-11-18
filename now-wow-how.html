@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Now Wow How, en workshopmetod | Claes-Philip Staiger</title>
+<meta name="description" content="Now Wow How är en workshopmetod i tre delar: nuläge, vision och handling. För alla slags utmaningar. Ladda ner workshopguiden.">
+<style>
+/* Stil enligt cllp/skissramverk (tokens): papper, bläck, salvia, ockra, lera. Serif för rubriker, sans för brödtext. */
+:root{--papper:#faf7f1;--creme:#f3eee4;--ink:#2e2a24;--salvia:#4e7558;--ockra:#bf9522;--terrakotta:#c0683a;--lera:#8a8073;
+--serif:'DejaVu Serif',Georgia,'Times New Roman',serif;--sans:'DejaVu Sans',Verdana,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--papper)}
+body{font-family:var(--sans);color:var(--ink);background:var(--papper);font-size:16px;line-height:1.6}
+a{color:var(--salvia)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+header.top{border-bottom:1px solid rgba(138,128,115,.35)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+header.top a{color:var(--ink);text-decoration:none;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+header.top a.back{letter-spacing:.04em;text-transform:none;color:var(--lera)}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--lera);margin-bottom:14px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--salvia);line-height:1.15}
+h1{font-size:clamp(40px,7vw,72px);letter-spacing:.02em}
+h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:18px}
+h3{font-size:22px;margin-bottom:8px}
+.mark{position:relative;white-space:nowrap}
+.lede{font-size:19px;max-width:640px;margin-top:22px}
+section{padding:72px 0;border-top:1px solid rgba(138,128,115,.25)}
+section.hero{border-top:0;padding:72px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+figure img{display:block;width:100%;height:auto;border:1px solid rgba(46,42,36,.18)}
+figcaption{font-size:12px;color:var(--lera);margin-top:8px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
+.card{position:relative;padding:26px 24px 24px}
+.card .nr{font-family:var(--serif);font-size:40px;color:var(--salvia);line-height:1}
+.card .nr i{font-style:normal;color:var(--ockra);margin:0 6px}
+.card .q{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lera);margin:12px 0 8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+ul.dots{list-style:none}
+ul.dots li{position:relative;padding-left:20px;margin-bottom:8px}
+ul.dots li:before{content:'';position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--ockra)}
+.when h3{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lera);margin:22px 0 10px}
+.when h3:first-child{margin-top:0}
+.steps{counter-reset:s;list-style:none;margin-top:8px}
+.steps li{counter-increment:s;padding:16px 0 16px 56px;position:relative;border-top:1px solid rgba(138,128,115,.3)}
+.steps li:last-child{border-bottom:1px solid rgba(138,128,115,.3)}
+.steps li:before{content:counter(s);position:absolute;left:4px;top:12px;font-family:var(--serif);font-size:30px;color:var(--salvia)}
+.steps b{font-weight:600}
+.steps .t{color:var(--lera);font-size:14px}
+.note{color:var(--lera);font-size:14px;margin-top:18px;max-width:640px}
+.dl{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.dl img{display:block;width:220px;height:auto;border:1px solid rgba(46,42,36,.18)}
+.btn{display:inline-block;margin-top:20px;padding:13px 22px;border:1px solid transparent;color:var(--ink);text-decoration:none;font-size:15px;position:relative}
+.btn:hover{background:var(--creme)}
+footer.bot{border-top:1px solid rgba(138,128,115,.35);padding:28px 0 40px;font-size:13px;color:var(--lera)}
+svg.rough{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+@media (max-width:820px){.hero-grid,.two,.dl{grid-template-columns:1fr}.cols3{grid-template-columns:1fr}section{padding:52px 0}}
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V4B2LNGTHG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V4B2LNGTHG');</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a href="index.html">Claes-Philip Staiger</a>
+  <a class="back" href="index.html">Startsida</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow">Metod</div>
+    <h1><span class="mark" data-mark>Now Wow How</span></h1>
+    <p class="lede">En workshopmetod i tre delar: nuläge, vision och handling. Den samlar en grupp kring ett gemensamt mål och en plan för att nå dit, oavsett om utmaningen är en förändring, en ny tjänst, en process, en strategi eller ett teknikval.</p>
+    <a class="btn rf" href="assets/now-wow-how/workshop-guide-now-wow-how-v5.1.pdf" download>Ladda ner workshopguiden (pdf)</a>
+  </div>
+  <figure><img src="assets/now-wow-how/omslag.jpg" alt="Ett team arbetar runt ett bord med lappar på väggen" width="1200" height="675"></figure>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Tre delar, i den här ordningen</h2>
+  <p style="max-width:680px">Först förstå, sedan drömma, sist bestämma. Varje del börjar med att alla tänker själva, fortsätter i grupp och avslutas med att grupperna presenterar för varandra.</p>
+  <div class="cols3">
+    <div class="card rf"><div class="nr">1<i>|</i>Now</div><div class="q">Var står vi nu?</div><p>Gruppen delar sin bild av nuläget: vad som fungerar och kan byggas vidare på, och var tid, pengar och kvalitet går förlorad.</p></div>
+    <div class="card rf"><div class="nr">2<i>|</i>Wow</div><div class="q">Vart vill vi?</div><p>Gruppen formar en vision med frågor som börjar med ”Tänk om…”, och beskriver effekterna, inte vad som ska byggas eller köpas.</p></div>
+    <div class="card rf"><div class="nr">3<i>|</i>How</div><div class="q">Hur tar vi oss dit?</div><p>Gruppen tar fram idéer, väljer de mest lovande och bestämmer nästa steg, med ansvar och tidplan.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div class="when">
+    <h2>När metoden passar</h2>
+    <h3>Sätta en vision eller ett mål</h3>
+    <ul class="dots"><li>Ni saknar en gemensam bild av behov och utmaningar</li><li>Ni saknar en gemensam bild av mål och förväntat resultat</li></ul>
+    <h3>Fatta beslut</h3>
+    <ul class="dots"><li>Utmaningarna känns för stora eller för otydliga</li><li>Möjligheterna känns oändliga och inget blir av</li></ul>
+    <h3>Engagera dem som berörs</h3>
+    <ul class="dots"><li>Perspektiven från dem som påverkas saknas</li><li>Förändringen riskerar att mötas av motstånd</li></ul>
+    <h3>Starta eller styra om ett arbete</h3>
+    <ul class="dots"><li>Samma arbete görs på olika sätt på olika ställen</li><li>Ni behöver en gemensam process innan krav, upphandling eller teknikval</li></ul>
+  </div>
+  <figure><img src="assets/now-wow-how/vem.jpg" alt="Två personer ritar ett flöde på en whiteboard" width="1200" height="900" loading="lazy"></figure>
+</div></section>
+
+<section><div class="wrap two">
+  <figure><img src="assets/now-wow-how/now.jpg" alt="Två personer går igenom en hylla med lådor" width="1200" height="675" loading="lazy"></figure>
+  <div>
+    <h2>Så går varje del till</h2>
+    <ol class="steps">
+      <li><b>Tänk själv</b> <span class="t">5 till 10 minuter</span><br>En tanke per lapp. Att börja enskilt minskar grupptänkande och ger fler perspektiv.</li>
+      <li><b>Tänk tillsammans</b> <span class="t">15 till 20 minuter</span><br>Lapparna delas, grupperas och sammanfattas på blädderblock.</li>
+      <li><b>Presentera och reflektera</b> <span class="t">15 till 20 minuter</span><br>Varje grupp presenterar det viktigaste. De andra ger återkoppling och ställer frågor.</li>
+    </ol>
+    <p class="note">Gäller det en process: rita flödet steg för steg på väggen och sätt varje utmaning på det steg där den uppstår. AI kan vara ett stöd före, under och efter workshopen, men det är gruppen som tänker och beslutar.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div>
+    <h2>Spelregler i rummet</h2>
+    <ul class="dots">
+      <li><b>Spela spelet.</b> Ingen har det rätta svaret, så alla behöver bidra.</li>
+      <li><b>Håll dig till ämnet.</b> Viktiga sidospår hamnar på parkeringen och tas om hand senare.</li>
+      <li><b>Skjut upp omdömet.</b> Mängd före kvalitet. Värderingen kommer sen.</li>
+      <li><b>Använd mångfalden.</b> Vi söker inte enighet, vi söker djupare förståelse.</li>
+    </ul>
+  </div>
+  <figure><img src="assets/now-wow-how/regler.jpg" alt="Ett handslag över ett dokument" width="1200" height="675" loading="lazy"></figure>
+</div></section>
+
+<section><div class="wrap dl">
+  <a href="assets/now-wow-how/workshop-guide-now-wow-how-v5.1.pdf" download><img src="assets/now-wow-how/guide-omslag.jpg" alt="Omslaget till workshopguiden Now Wow How" width="642" height="909" loading="lazy"></a>
+  <div>
+    <h2>Workshopguiden</h2>
+    <p style="max-width:600px">Hela metoden med upplägg, tider, frågor, idémall och tips för den som leder workshopen. 16 sidor i A5 som uppslag, version 5.1.</p>
+    <a class="btn rf" href="assets/now-wow-how/workshop-guide-now-wow-how-v5.1.pdf" download>Ladda ner pdf (1,2 MB)</a>
+  </div>
+</div></section>
+</main>
+
+<footer class="bot"><div class="wrap">Claes-Philip Staiger, <a href="mailto:claes-philip@staiger.se">claes-philip@staiger.se</a>. Illustrationerna är AI-genererade.</div></footer>
+
+<script src="https://unpkg.com/roughjs@4.6.6/bundled/rough.js"></script>
+<script>
+/* Skissade accenter som i skissramverket: en ockra understrykning (mark) och tunna skissade ramar (rf). */
+(function(){
+  if(!window.rough) return;
+  function draw(){
+    document.querySelectorAll('svg.rough').forEach(s=>s.remove());
+    let k=1;
+    const o=x=>Object.assign({seed:7+(k++),roughness:1.1,bowing:1},x);
+    document.querySelectorAll('[data-mark]').forEach(el=>{
+      const sv=document.createElementNS('http://www.w3.org/2000/svg','svg');sv.setAttribute('class','rough');
+      const w=el.offsetWidth,h=el.offsetHeight;sv.setAttribute('width',w);sv.setAttribute('height',h+12);
+      sv.appendChild(rough.svg(sv).line(0,h-2,w,h-8,o({stroke:'#bf9522',strokeWidth:7,roughness:1.4})));el.appendChild(sv);
+    });
+    document.querySelectorAll('.rf').forEach(el=>{
+      const sv=document.createElementNS('http://www.w3.org/2000/svg','svg');sv.setAttribute('class','rough');
+      const w=el.offsetWidth,h=el.offsetHeight;sv.setAttribute('width',w);sv.setAttribute('height',h);
+      sv.appendChild(rough.svg(sv).rectangle(1,1,w-2,h-2,o({stroke:'#2e2a24',strokeWidth:1.1,roughness:.9})));el.appendChild(sv);
+    });
+  }
+  window.addEventListener('load',draw);
+  let t;window.addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(draw,150)});
+})();
+</script>
+</body>
+</html>
